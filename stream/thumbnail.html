@@ -1,0 +1,122 @@
+<!doctype html>
+<!--
+  Universal stream thumbnail (Uzbek): 1280×720.
+  Render: ./stream/make-thumbnail.sh  →  stream/thumbnail.png
+-->
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg2: #111c33;
+    --go: #00add8;
+    --go-soft: #5dc9e2;
+    --yellow: #fddd00;
+    --green: #3ddc84;
+    --text: #f4f7fb;
+    --muted: #8aa0bf;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 720px; overflow: hidden; }
+  body {
+    font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(900px 600px at 85% 20%, rgba(0,173,216,.28), transparent 60%),
+      radial-gradient(700px 500px at 0% 100%, rgba(253,221,0,.10), transparent 60%),
+      linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
+    position: relative;
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .left { position: absolute; left: 64px; top: 56px; width: 720px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--yellow); color: #111;
+    font-weight: 800; font-size: 30px; letter-spacing: 1px;
+    padding: 8px 22px; border-radius: 12px;
+    transform: rotate(-2deg);
+    box-shadow: 0 8px 0 rgba(0,0,0,.35);
+  }
+  .live { width: 14px; height: 14px; border-radius: 50%; background: #e3242b; }
+  h1 {
+    margin-top: 30px;
+    font-size: 116px; line-height: .95; font-weight: 800; letter-spacing: -3px;
+    text-shadow: 0 6px 0 rgba(0,0,0,.35);
+  }
+  h1 .go { color: var(--go); }
+  .sub { margin-top: 22px; font-size: 36px; font-weight: 600; color: var(--go-soft); }
+  .sub b { color: var(--text); }
+
+  .chips { position: absolute; left: 64px; bottom: 44px; display: flex; gap: 14px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,.07); border: 2px solid rgba(255,255,255,.12);
+    padding: 10px 20px; border-radius: 14px;
+    font-size: 26px; font-weight: 700;
+  }
+  .chip .dot { color: var(--green); }
+
+  .code {
+    position: absolute; right: 60px; top: 56px; width: 440px;
+    background: #0a0f1a; border: 2px solid rgba(0,173,216,.45); border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(0,0,0,.5), 0 0 0 8px rgba(0,173,216,.08);
+    transform: rotate(3deg);
+    overflow: hidden;
+  }
+  .code .bar { display: flex; gap: 8px; padding: 14px 16px; background: #131b2b; }
+  .code .bar i { width: 13px; height: 13px; border-radius: 50%; display: block; }
+  .code pre {
+    font-family: Menlo, monospace; font-size: 18px; line-height: 1.6;
+    padding: 18px 22px 22px; color: #cfd8e6;
+  }
+  .k { color: #ff7ab6; } .f { color: var(--go-soft); } .t { color: var(--yellow); } .c { color: #6b7d99; }
+
+  .stat {
+    position: absolute; right: 80px; top: 420px; text-align: right;
+  }
+  .stat .big { font-size: 110px; font-weight: 800; line-height: .9; color: var(--go); text-shadow: 0 6px 0 rgba(0,0,0,.35); }
+  .stat .lbl { font-size: 28px; font-weight: 700; }
+  .stat .lbl span { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="grid"></div>
+
+<div class="left">
+  <div class="badge"><span class="live"></span>JONLI EFIR</div>
+  <h1>Algoritmlar<br><span class="go">Go</span> tilida</h1>
+  <div class="sub">NeetCode 150 · <b>AI ustoz bilan</b></div>
+</div>
+
+<div class="code">
+  <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+<pre><span class="k">func</span> <span class="f">yech</span>(m <span class="t">Masala</span>) <span class="t">Yechim</span> {
+  <span class="f">tushun</span>(m)            <span class="c">// 1. Tushun</span>
+  p := <span class="f">patternTop</span>(m)   <span class="c">// 2. Pattern</span>
+  r := <span class="f">rejaTuz</span>(p)      <span class="c">// 3. O(?)</span>
+  k := <span class="f">kodYoz</span>(r)       <span class="c">// 4. Kod</span>
+  <span class="f">testla</span>(k)            <span class="c">// 5. Test</span>
+  <span class="k">return</span> <span class="f">tushuntir</span>(k)  <span class="c">// 6. Izoh</span>
+}</pre>
+</div>
+
+<div class="chips">
+  <div class="chip"><span class="dot">●</span>Har kuni yangi masala</div>
+  <div class="chip"><span class="dot">●</span>Big-O tahlili</div>
+  <div class="chip"><span class="dot">●</span>Intervyuga tayyorgarlik</div>
+</div>
+
+<div class="stat">
+  <div class="big">150</div>
+  <div class="lbl">masala <span>·</span> 8 hafta</div>
+</div>
+</body>
+</html>
