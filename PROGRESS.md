@@ -5,7 +5,7 @@
 ## 📊 Dashboard
 | Solved | In progress | Hint / Read solution | Skipped | Current week | Next up |
 |---|---|---|---|---|---|
-| 1 / 150 | 0 | 0 / 0 | 0 | 1 | 002 Valid Anagram |
+| 2 / 150 | 0 | 0 / 0 | 0 | 1 | 003 Two Sum |
 
 **Status legend:** ⬜ todo · 🔄 in progress · ✅ solved alone · 🟡 solved with hint · ❌ read solution · ⏭ skipped
 
@@ -42,7 +42,7 @@ Take the topic's lesson before its problems. Say **"lesson"**.
 | ID | Problem | Difficulty | Status | Started | Redo on |
 |---|---|---|---|---|---|
 | 001 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 Easy | ✅ | 2026-11-21 | |
-| 002 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟢 Easy | ⬜ | | |
+| 002 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟢 Easy | ✅ | 2026-11-21 | |
 | 003 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy | ⬜ | | |
 | 004 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟠 Medium | ⬜ | | |
 | 005 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟠 Medium | ⬜ | | |
