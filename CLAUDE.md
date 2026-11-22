@@ -17,7 +17,9 @@ The user will NOT write detailed prompts. Map short requests to these skills:
 | "lesson", "teach me sliding window", "start week 2", "course" | `lesson` |
 | "start two sum", "I'm going to solve 012", "next problem", "what's next?" | `start-problem` |
 | "help", "hint", "I'm stuck", "explain X", "what pattern is this?" | `tutor` |
-| "review", "check my solution", "is this right?", "done" | `reviewer` |
+| "review", "check my solution", "is this right?", "done" | `reviewer` (also logs mistakes to `MISTAKES.md`) |
+| "mistakes", "what do I keep getting wrong?", "mistake summary" | `reviewer` (summary mode) |
+| "help me improve", "improve", "drill my weak spots" | `reviewer` (improve mode) |
 | "interview", "mock", "let's have an interview", "test me" | `interviewer` |
 | "progress", "status", "how am I doing?" | Summarize the `PROGRESS.md` dashboard + overdue redos |
 
@@ -26,6 +28,7 @@ If it isn't clear which problem they mean, use the row marked 🔄 in `PROGRESS.
 ## Repo layout
 ```
 PROGRESS.md               master list (150 problems) + dashboard + mock interview log
+MISTAKES.md               mistake log (reviewer adds rows every review) + weak-spot summary + drills
 ROADMAP.md                the 8-week plan
 problems/<ID>-<slug>/     one workspace per problem, e.g. problems/003-two-sum/
   README.md               problem statement + task checklist
