@@ -5,13 +5,13 @@
 ## 📊 By category
 | Category | Count | Last seen | Trend |
 |---|---|---|---|
-| ⏱ Big-O | 6 | 2026-11-22 | 🔁 recurring |
-| 🧪 Edge cases | 3 | 2026-11-22 | 🔁 recurring (but 004 had 2 own rows ✅) |
-| 🗣 Explanation | 9 | 2026-11-22 | 🔁 recurring |
+| ⏱ Big-O | 7 | 2026-11-22 | 🔁 recurring |
+| 🧪 Edge cases | 3 | 2026-11-22 | 🔁 recurring (but 004 + 005 had own rows ✅) |
+| 🗣 Explanation | 12 | 2026-11-22 | 🔁 recurring (005 60-sec was good ✅) |
 | 🏷 Pattern / brute force | 4 | 2026-11-22 | 🔁 recurring |
 | ✅ Correctness | 0 | | |
-| 🐹 Go idioms | 2 | 2026-11-22 | 🟢 fixed |
-| 📖 Readability | 3 | 2026-11-22 | 🔁 recurring |
+| 🐹 Go idioms | 3 | 2026-11-22 | 🟢 fixed |
+| 📖 Readability | 5 | 2026-11-22 | 🟢 fixed (all rows) |
 
 **Trend:** 🔁 recurring (2+ times, still open) · 🟡 open · 🟢 fixed (not repeated in the last 3 reviews)
 
@@ -23,7 +23,7 @@
 5. After every fix, update **every** place: solution.go header, card, 60-sec.
 6. Use standard pattern names (Hash set, Hash map, Two pointers…). Signals = the phrase in the problem + what it implies.
 7. 60-sec explanation = idea → why it beats brute force → Big-O. Short sentences.
-8. Name every variable before Big-O: n = items, m = length of each item.
+8. Name every variable (n, m, k…), then add up **every** step: count O(n) + sort O(m log m) = O(n + m log m).
 
 ## 📝 Log
 | Date | Problem | Category | Mistake | Rule / fix | Status |
@@ -55,6 +55,13 @@
 | 2026-11-22 | 004 Group Anagrams | 🗣 Explanation | solution.go header + 60-sec still say O(n) after fixing card | After a fix, update every place: code header, card, 60-sec | 🟢 fixed |
 | 2026-11-22 | 004 Group Anagrams | 📖 Readability | Vague names (e, responseStrGroups); file not gofmt'd | word, groups; run gofmt before review | 🟢 fixed |
 | 2026-11-22 | 004 Group Anagrams | 📖 Readability | Stale comments still mention old name `e` | Rename → search old name in comments too | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | ⏱ Big-O | Said O(m log m); dropped the O(n) counting loop | Add every step: O(n + m log m) → worst O(n log n) | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | 🗣 Explanation | "Mistake I made" left as a placeholder | Fill it every time, 1–2 sentences | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | 🗣 Explanation | 60-sec opens with Big-O, ~130 words | Idea → why → Big-O, ≤120 words | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | 🐹 Go idioms | `-1 * cmp.Compare(a, b)` to sort descending | Swap the args: cmp.Compare(b, a) | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | 📖 Readability | Typo `uniquNumbers`; test file not gofmt'd | Spell-check names; gofmt -w before review | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | 📖 Readability | Redundant checks (len>0, k checked twice); names topFrequents/response | Put the stop in the loop condition; name it buckets | 🟢 fixed |
+| 2026-11-22 | 005 Top K Frequent | 🗣 Explanation | "Optimal idea" copied the tutor's hint word for word | Rewrite every hint in your own words | 🟡 open |
 
 ## 🏋️ Drills
 _None yet. Say "help me improve"._

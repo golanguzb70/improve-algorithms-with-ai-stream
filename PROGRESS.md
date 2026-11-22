@@ -5,7 +5,7 @@
 ## 📊 Dashboard
 | Solved | In progress | Hint / Read solution | Skipped | Current week | Next up |
 |---|---|---|---|---|---|
-| 3 / 150 | 1 | 0 / 0 | 0 | 1 | 005 Top K Frequent Elements |
+| 3 / 150 | 1 | 1 / 0 | 0 | 1 | 006 Encode and Decode Strings |
 
 **Status legend:** ⬜ todo · 🔄 in progress · ✅ solved alone · 🟡 solved with hint · ❌ read solution · ⏭ skipped
 
@@ -45,7 +45,7 @@ Take the topic's lesson before its problems. Say **"lesson"**.
 | 002 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | 🟢 Easy | ✅ | 2026-11-21 | |
 | 003 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy | 🔄 | 2026-11-22 | 2026-11-25 |
 | 004 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟠 Medium | ✅ | 2026-11-22 | |
-| 005 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟠 Medium | ⬜ | | |
+| 005 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟠 Medium | 🟡 | 2026-11-22 | 2026-11-23 |
 | 006 | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | 🟠 Medium | ⬜ | | |
 | 007 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟠 Medium | ⬜ | | |
 | 008 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 🟠 Medium | ⬜ | | |
