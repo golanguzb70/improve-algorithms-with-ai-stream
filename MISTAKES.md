@@ -5,22 +5,25 @@
 ## 📊 By category
 | Category | Count | Last seen | Trend |
 |---|---|---|---|
-| ⏱ Big-O | 4 | 2026-11-21 | 🔁 recurring |
-| 🧪 Edge cases | 2 | 2026-11-21 | 🔁 recurring |
-| 🗣 Explanation | 3 | 2026-11-21 | 🔁 recurring |
-| 🏷 Pattern / brute force | 2 | 2026-11-21 | 🔁 recurring |
+| ⏱ Big-O | 6 | 2026-11-22 | 🔁 recurring |
+| 🧪 Edge cases | 3 | 2026-11-22 | 🔁 recurring (but 004 had 2 own rows ✅) |
+| 🗣 Explanation | 9 | 2026-11-22 | 🔁 recurring |
+| 🏷 Pattern / brute force | 4 | 2026-11-22 | 🔁 recurring |
 | ✅ Correctness | 0 | | |
-| 🐹 Go idioms | 1 | 2026-11-21 | 🟢 fixed |
-| 📖 Readability | 0 | | |
+| 🐹 Go idioms | 2 | 2026-11-22 | 🟢 fixed |
+| 📖 Readability | 3 | 2026-11-22 | 🔁 recurring |
 
 **Trend:** 🔁 recurring (2+ times, still open) · 🟡 open · 🟢 fixed (not repeated in the last 3 reviews)
 
 ## 🧠 My rules (learned the hard way)
-1. Bounded alphabet (26 letters) → space is O(1), not O(n).
+1. Constant only if the problem fixes it (26 letters → O(1)). Input lengths (m ≤ 100) stay as variables.
 2. Brute force = the simplest correct idea (usually all pairs, O(n²)). Sorting is an *alternative*, not the brute force.
 3. Strings in Go are immutable: sorting one needs a copy → O(n) space.
-4. Always list edge cases: empty, 1 element, negatives, extremes, duplicates at the ends.
-5. Keep `card.md` in sync with the code after every fix.
+4. Edge cases go in **solution_test.go**, not just the card: 1 element, negatives, zero, extremes, duplicates, answer at the ends.
+5. After every fix, update **every** place: solution.go header, card, 60-sec.
+6. Use standard pattern names (Hash set, Hash map, Two pointers…). Signals = the phrase in the problem + what it implies.
+7. 60-sec explanation = idea → why it beats brute force → Big-O. Short sentences.
+8. Name every variable before Big-O: n = items, m = length of each item.
 
 ## 📝 Log
 | Date | Problem | Category | Mistake | Rule / fix | Status |
@@ -37,6 +40,21 @@
 | 2026-11-21 | 002 Valid Anagram | 🐹 Go idioms | Unneeded final loop over the map | If lengths match and no count goes negative, you're done | 🟢 fixed |
 | 2026-11-21 | 002 Valid Anagram | 🗣 Explanation | card.md still described the removed loop | Update the card after every code change | 🟡 open |
 | 2026-11-21 | 002 Valid Anagram | 🗣 Explanation | "Mistake I made" not in own words | Write it yourself, 1–2 sentences | 🟡 open |
+| 2026-11-22 | 003 Two Sum | 🧪 Edge cases | Listed edge cases in card, added no test rows | Add 2+ own rows to solution_test.go before review | 🟡 open |
+| 2026-11-22 | 003 Two Sum | 🏷 Pattern / brute force | Pattern named "Index Map" | Say "Hash map (complement lookup)" | 🟢 fixed |
+| 2026-11-22 | 003 Two Sum | 🗣 Explanation | 60-sec summary is one run-on; no "why it beats O(n²)" | Idea → why O(1) lookup replaces inner loop → Big-O | 🟡 open |
+| 2026-11-22 | 003 Two Sum | 🗣 Explanation | "Mistake I made" left empty again | Fill it every time, 1–2 sentences | 🟢 fixed |
+| 2026-11-22 | 003 Two Sum | 📖 Readability | Two passes where one works; vague names mp, e | One pass: check, then store; name it indexOf | 🟢 fixed |
+| 2026-11-22 | 003 Two Sum | 🗣 Explanation | Card idea + 60-sec still describe the old two-pass code | Re-read the card after every code change | 🟡 open |
+| 2026-11-22 | 003 Two Sum | 🏷 Pattern / brute force | Signals too vague: "two numbers that add up" | Signal = phrase in problem + what it implies | 🟡 open |
+| 2026-11-22 | 004 Group Anagrams | ⏱ Big-O | Said O(n) time/space; dropped word length m | Input lengths stay variables: O(n·m log m), O(n·m) | 🟢 fixed |
+| 2026-11-22 | 004 Group Anagrams | ⏱ Big-O | Brute force O(n³): mixed up n (words) and m (letters) | Name each variable; pairs × O(m) check = O(n²·m) | 🟢 fixed |
+| 2026-11-22 | 004 Group Anagrams | 🐹 Go idioms | SortFunc + cmp.Compare; magic capacity len/4 | slices.Sort for bytes; no guessed capacities | 🟢 fixed |
+| 2026-11-22 | 004 Group Anagrams | 🗣 Explanation | 60-sec ~150 words, opens with Big-O, "why" is muddled | ≤120 words; why = one lookup replaces comparing every word | 🟡 open |
+| 2026-11-22 | 004 Group Anagrams | 🗣 Explanation | "Mistake I made" not an actual mistake | Name the real slip, e.g. "dropped m" | 🟢 fixed |
+| 2026-11-22 | 004 Group Anagrams | 🗣 Explanation | solution.go header + 60-sec still say O(n) after fixing card | After a fix, update every place: code header, card, 60-sec | 🟢 fixed |
+| 2026-11-22 | 004 Group Anagrams | 📖 Readability | Vague names (e, responseStrGroups); file not gofmt'd | word, groups; run gofmt before review | 🟢 fixed |
+| 2026-11-22 | 004 Group Anagrams | 📖 Readability | Stale comments still mention old name `e` | Rename → search old name in comments too | 🟢 fixed |
 
 ## 🏋️ Drills
 _None yet. Say "help me improve"._
